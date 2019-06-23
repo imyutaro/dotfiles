@@ -1,0 +1,61 @@
+// Place your key bindings in this file to override the defaults
+[
+    // remove default keybord shortcut
+    // ref: https://code.visualstudio.com/docs/getstarted/keybindings#_removing-a-specific-key-binding-rule
+    {
+        "key": "ctrl+shift+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "-markdown.showPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+k v",
+        "command": "-markdown.showPreviewToSide",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "-markdown-preview-enhanced.openPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+k v",
+        "command": "-markdown-preview-enhanced.openPreviewToTheSide",
+        "when": "editorLangId == 'markdown'"
+    },
+
+
+    // add my keybinding
+    {
+        "key": "ctrl+shift+m",
+        "command": "markdown-preview-enhanced.openPreviewToTheSide",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "markdown-preview-enhanced.insertTable",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "markdown.preview.toggleLock",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+cmd+b",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "latex-workshop.view",
+        "when": "editorTextFocus && !latex-workshop:altkeymap"
+    },
+    {
+        "key": "alt+cmd+v",
+        "command": "-latex-workshop.view",
+        "when": "editorTextFocus && !latex-workshop:altkeymap"
+    },
+]
