@@ -77,3 +77,8 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+
+" About serch
+set hlsearch
+set smartcase
+set ignorecase
