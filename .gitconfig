@@ -1,5 +1,7 @@
 [user]
-	name = imyutaro
-	email = yutarofortech@gmail.com
+    name = imyutaro
+    email = yutarofortech@gmail.com
 [color]
-	ui = auto
+    ui = auto
+[core]
+    editor = vim
