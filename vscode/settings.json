@@ -1,33 +1,33 @@
 {
-    "workbench.colorTheme": "Theme Bear",
-    "editor.renderControlCharacters": true,
-    "workbench.statusBar.feedback.visible": false,
-    "editor.wordWrap": "on",
-    "editor.minimap.enabled": false,
-    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Bear Theme",
     "workbench.startupEditor": "newUntitledFile",
-    "editor.renderWhitespace": "all",
-    "files.trimTrailingWhitespace": true,
     // activity barを非表示に　keyboard shortcut で　cmd+b で表示するように．
     "workbench.activityBar.visible": false,
+
+    "files.trimTrailingWhitespace": true,
+
+    "window.zoomLevel": 1,
+
+    "editor.renderControlCharacters": true,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "all",
     // tabのサイズ．
     "editor.tabSize": 2,
     // indentに使う文字．
     "editor.insertSpaces": true,
     // snippetをtabで展開できるようにする．
     "editor.tabCompletion": "on",
-
     // editor.wordSeparators: 単語単位での移動を行う場合の区切り文字を指定
     // 日本語文書で単語移動を使うため、助詞や読点、括弧を区切り文字として指定する
     "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
 
-    // 設定: LaTeX Workshop
-
+    // 設定: LaTeX Workshop ------------------------
     // LaTeX Workshop ではビルド設定を「Tool」と「Recipe」という2つで考える
     //   Tool: 実行される1つのコマンド。コマンド (command) と引数 (args) で構成される
     //   Recipe: Tool の組み合わわせを定義する。Tool の組み合わせ (tools) で構成される。
     //           tools の中で利用される Tool は "latex-workshop.latex.tools" で定義されている必要がある。
-
 
     // latex-workshop.latex.tools: Tool の定義
     "latex-workshop.latex.tools": [
@@ -112,7 +112,7 @@
     // 一時ファイルの影響で、修正後のビルドに失敗してしまう事がよくある。そのため、一時的なファイルを
     // 削除する機能 (クリーンアップ) が LaTeX Workshop には備わっている。
     "latex-workshop.latex.clean.fileTypes": [
-        "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk", // "*.synctex.gz",
+        "*.aux", "*.bbl", "*.log", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.fdb_latexmk", // "*.synctex.gz",
         // for Beamer files
         "_minted*", "*.nav", "*.snm", "*.vrb",
     ],
@@ -139,7 +139,7 @@
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.synctex.path": "/Library/TeX/texbin/synctex",
 
-    // 時計のフォーマット．clock extension.
+    // 時計のフォーマット．clock extension. ----------------------
     "clock.active": true,
     "clock.format": "mmmm dS, dddd, hh:MM tt",
     "clock.updateInterval": 1000,
@@ -153,13 +153,12 @@
       "editor.quickSuggestions": true,
       "editor.snippetSuggestions": "top"
     },
-    // markdownでただの改行を改行として扱う．
-    "markdown.preview.breaks": true,
     // markdownの数式レンダリングをmathjaxで行う．
     "markdown-preview-enhanced.mathRenderingOption": "MathJax",
     // Open only one preview.
     "markdown-preview-enhanced.singlePreview": true,
     // https://qiita.com/kumapo0313/items/a59df3d74a7eaaaf3137#テーブルの-colspanrowspan-に対応
     "markdown-preview-enhanced.enableExtendedTableSyntax": true,
-    "markdown-preview-enhanced.codeBlockTheme": "github.css"
+    "markdown-preview-enhanced.codeBlockTheme": "github.css",
+    "markdown-preview-enhanced.breakOnSingleNewLine": false
 }
