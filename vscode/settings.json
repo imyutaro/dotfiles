@@ -160,5 +160,11 @@
     // https://qiita.com/kumapo0313/items/a59df3d74a7eaaaf3137#テーブルの-colspanrowspan-に対応
     "markdown-preview-enhanced.enableExtendedTableSyntax": true,
     "markdown-preview-enhanced.codeBlockTheme": "github.css",
-    "markdown-preview-enhanced.breakOnSingleNewLine": false
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+
+    // Vim
+    // Vimの検索コマンド時のハイライト表示
+    "vim.hlsearch": true,
+    // Vimの無名レジスタとクリップボードを同期
+    "vim.useSystemClipboard": true
 }

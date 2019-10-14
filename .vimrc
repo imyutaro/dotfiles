@@ -82,3 +82,26 @@ inoremap <Right> <Nop>
 set hlsearch
 set smartcase
 set ignorecase
+
+" Show filename in status line
+set laststatus=2
+
+" ===============================================================
+" Change indent width based on file extension
+" ref: https://qiita.com/mitsuru793/items/2d464f30bd091f5d0fef
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.c setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
+" " Color theme
+" " these highlight etc settings about colorscheme have to be put before colorscheme molokai
+" set t_Co=256
+" autocmd ColorScheme * highlight Visual ctermbg=231 ctermfg=35 guibg=#262626 guifg=#8fafd7 cterm=reverse gui=reverse
+" " autocmd ColorScheme * highlight Comment ctermfg=darkgray
+" " set background=dark
+" syntax on
+" colorscheme molokai
+
