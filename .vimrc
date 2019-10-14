@@ -16,6 +16,8 @@ au BufWrite /private/etc/pw.* set nowritebackup nobackup
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
 
+" change statusline color
+autocmd ColorScheme * highlight StatusLine ctermbg=101 ctermfg=15 guibg=#87875f guifg=#262626 cterm=NONE gui=NONE
 " colorscheme
 "colorscheme molokai
 "syntax on
@@ -94,7 +96,31 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.c setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead * setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
+
+" status line
+" Display file name
+set statusline=\ %t
+" If file is changed, + is shown
+set statusline+=%m\ \<\<
+" Display full path
+set statusline+=\ %F
+" Readonly or not
+set statusline+=%r
+" Display HELP if HELP page
+set statusline+=%h
+" Display PREVIEW if PREVIEW window
+set statusline+=%w
+" Right side fomr below
+set statusline+=%=
+" Column number
+set statusline+=(%l:%c)
+" File encoding
+set statusline+=\ [ENC=%{&fileencoding}]\ 
+" Always display statusline
+set laststatus=2
+
 
 " " Color theme
 " " these highlight etc settings about colorscheme have to be put before colorscheme molokai
