@@ -85,9 +85,6 @@ set hlsearch
 set smartcase
 set ignorecase
 
-" Show filename in status line
-set laststatus=2
-
 " ===============================================================
 " Change indent width based on file extension
 " ref: https://qiita.com/mitsuru793/items/2d464f30bd091f5d0fef
@@ -100,24 +97,26 @@ augroup fileTypeIndent
 augroup END
 
 " status line
+" Display HELP if HELP page
+set statusline=%h
 " Display file name
-set statusline=\ %t
-" If file is changed, + is shown
+set statusline+=\ %t
+" If file is changed, + is shown. If read only, display [-]
 set statusline+=%m\ \<\<
 " Display full path
 set statusline+=\ %F
 " Readonly or not
-set statusline+=%r
-" Display HELP if HELP page
-set statusline+=%h
+" set statusline+=%r
 " Display PREVIEW if PREVIEW window
 set statusline+=%w
 " Right side fomr below
 set statusline+=%=
 " Column number
 set statusline+=(%l:%c)
+" % of file
+set statusline+=\ -\ %P
 " File encoding
-set statusline+=\ [ENC=%{&fileencoding}]\ 
+set statusline+=\ \ \ \ [ENC=%{&fileencoding}]\ 
 " Always display statusline
 set laststatus=2
 
