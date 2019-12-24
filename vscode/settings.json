@@ -1,8 +1,8 @@
 {
     "workbench.colorTheme": "Bear Theme",
     "workbench.startupEditor": "newUntitledFile",
-    // activity barを非表示に　keyboard shortcut で　cmd+b で表示するように．
-    "workbench.activityBar.visible": false,
+    // activity barを非表示に　keyboard shortcut で　cmd+ctrl+b で表示するように．
+    "workbench.activityBar.visible": true,
 
     "files.trimTrailingWhitespace": true,
 
@@ -98,6 +98,9 @@
         }
     ],
 
+    // set default recipe
+    "latex-workshop.latex.recipe.default": "first",
+
     // latex-workshop.latex.magic.args: マジックコメント付きの LaTeX ドキュメントをビルドする設定
     // '%!TEX' で始まる行はマジックコメントと呼ばれ、LaTeX のビルド時にビルドプログラムに解釈され、
     // プログラムの挙動を制御する事ができる。
@@ -128,6 +131,8 @@
     // 上記説明にもあったように、ビルド失敗時に生成された一時ファイルが悪影響を及ぼす事があるため、自動で
     // クリーンアップがかかるようにしておく。
     "latex-workshop.latex.autoClean.run": "onBuilt",
+
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled":false,
 
     // latex-workshop.latex.autoBuild.onSave.enabled: .tex ファイルの保存時に自動的にビルドを行うかどうか
     // LaTeX ファイルは .tex ファイルを変更後にビルドしないと、PDF ファイル上に変更結果が反映されないため、
