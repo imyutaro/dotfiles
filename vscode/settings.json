@@ -141,7 +141,7 @@
 
     // 時計のフォーマット．clock extension. ----------------------
     "clock.active": true,
-    "clock.format": "mmmm dS, dddd, hh:MM tt",
+    "clock.format": "mmmm dS, dddd, h:MM tt",
     "clock.updateInterval": 1000,
     "clock.alignment": "Right",
     // "clock.priority": 10, // i dont know what is for...
