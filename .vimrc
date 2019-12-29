@@ -12,44 +12,39 @@ au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 " ref: https://qiita.com/pepoipod/items/e058b098af389ddb451f
-" 背景をterminalの背景に揃える
+" Same vim background as termianl
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
 
 " change statusline color
-autocmd ColorScheme * highlight StatusLine ctermbg=101 ctermfg=15 guibg=#87875f guifg=#262626 cterm=NONE gui=NONE
+" autocmd ColorScheme * highlight StatusLine ctermbg=101 ctermfg=15 guibg=#87875f guifg=#262626 cterm=NONE gui=NONE
+autocmd ColorScheme * highlight StatusLine ctermbg=101 ctermfg=0 guibg=#87875f guifg=#262626 cterm=NONE gui=NONE
 " colorscheme
-"colorscheme molokai
-"syntax on
 colorscheme apprentice
 set t_Co=256
 syntax enable
-" 行番号を表示
+" Line number
 set number
-" for indent
 " tab=4spaces
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-" タブの代わりに空白文字を指定する
+" Use spaces instead of tab
 set expandtab
 " 新しい行のインデントを現在行と同じにする
 set autoindent
 " 新しい行を作ったときに高度な自動インデントを行う
 set smarttab
-" 行番号の設定　行の色など
+" Line number settings (color etc)
 set cursorline
 hi CursorLineNr term=bold cterm=NONE ctermfg=228 ctermbg=NONE
 hi clear CursorLine
-" grep検索を設定する
+" grep search
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
 " good example of .vimrc
 " https://github.com/flatusv/dotfiles/blob/master/.vimrc
-
-" Ignore case when searching
-" set ignorecase
 
 " Turn on the WiLd menu //"set wildmenu" enables a menu at the bottom of the vim/gvim window.
 set wildmenu
