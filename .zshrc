@@ -251,3 +251,8 @@ export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh  %s'
 
 alias rm="rm -i"
+
+EDITOR=vim
+# enable vim key bind on cli
+# bindkey -v
+
