@@ -2,7 +2,9 @@
     "workbench.colorTheme": "Bear Theme",
     "workbench.startupEditor": "newUntitledFile",
     // activity barを非表示に　keyboard shortcut で　cmd+ctrl+b で表示するように．
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
+    // Open file in new tab
+    "workbench.editor.enablePreview": false,
 
     "files.trimTrailingWhitespace": true,
 
