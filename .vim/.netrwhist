@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/yutaro/lab/MASTER/workspace/fm/models'
 let g:netrw_dirhist_2='/Users/yutaro/lab/MASTER/workspace/fm'
 let g:netrw_dirhist_3='/Users/yutaro/lab/MASTER/workspace'
 let g:netrw_dirhist_4='/Users/yutaro/lab/MASTER/workspace/fm'
 let g:netrw_dirhist_5='/Users/yutaro/lab/MASTER'
 let g:netrw_dirhist_6='/Users/yutaro/lab/MASTER/workspace/fm'
+let g:netrw_dirhist_7='/Users/yutaro/tmp'

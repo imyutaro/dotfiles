@@ -1,5 +1,3 @@
-alias k='kubectl'
-
 # path to workspace folder
 export workspace="$HOME/lab/MASTER/workspace"
 # path to meeting reports folder
@@ -208,17 +206,17 @@ disable r
 #    if overridden; then return; fi
 #    printf "\033]0;%s\a" "${1%% *} | $cwd$(gitDirty)" # Omit construct from $1 to show args
 # }
-
-precmd() {
-   pwd=$(pwd)
-   cwd=${pwd##*/}
-   print -Pn "\e]0;$cwd\a"
-}
-
-preexec() {
-   printf "\033]0;%s\a" "${1%% *} | $cwd"
-}
-
+# 
+# precmd() {
+#    pwd=$(pwd)
+#    cwd=${pwd##*/}
+#    print -Pn "\e]0;$cwd\a"
+# }
+# 
+# preexec() {
+#    printf "\033]0;%s\a" "${1%% *} | $cwd"
+# }
+# 
 # --------------
 
 # for tmux
@@ -243,7 +241,7 @@ preexec() {
 #fi
 
 # for tmux setting to show currently branch
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+# PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 # for source highlight
 # http://nippondanji.blogspot.com/2011/11/less.html
@@ -255,4 +253,7 @@ alias rm="rm -i"
 EDITOR=vim
 # enable vim key bind on cli
 # bindkey -v
+
+export thesis="/Users/yutaro/lab/MASTER/Meeting/sasanoLabo/thesis"
+alias k='kubectl'
 
