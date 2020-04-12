@@ -107,6 +107,15 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# To solve zlib error when using pyenv install
+# https://github.com/jiansoung/issues-list/issues/13
+# zlib
+# For compilers to find zlib you may need to set
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
+# For pkg-config to find zlib you may need to set
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
+
 # virtualenv
 eval "$(pyenv virtualenv-init -)"
 
@@ -250,7 +259,7 @@ export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh  %s'
 
 alias rm="rm -i"
 
-EDITOR=vim
+export EDITOR=vim
 # enable vim key bind on cli
 # bindkey -v
 
