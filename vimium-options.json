@@ -21,7 +21,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "# Insert your preferred key mappings here.\n\nmap i LinkHints.activateMode\nmap I LinkHints.activateModeToOpenInNewTab\nunmap u\nunmap d\nmap U scrollPageUp\nmap D scrollPageDown\nmap f Vomnibar.activate",
+  "keyMappings": "# Insert your preferred key mappings here.\n\nmap i LinkHints.activateMode\nmap I LinkHints.activateModeToOpenInNewTab\nunmap u\nunmap d\nmap U scrollPageUp\nmap D scrollPageDown\nmap K scrollPageUp\nmap J scrollPageDown\nmap f Vomnibar.activate",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
