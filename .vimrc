@@ -125,3 +125,6 @@ set laststatus=2
 " syntax on
 " colorscheme molokai
 
+set matchpairs+=「:」,（:）
+set clipboard+=unnamed
+
