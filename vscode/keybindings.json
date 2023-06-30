@@ -26,8 +26,6 @@
         "command": "-markdown-preview-enhanced.openPreviewToTheSide",
         "when": "editorLangId == 'markdown'"
     },
-
-
     // add my keybinding
     {
         "key": "ctrl+shift+m",
@@ -78,4 +76,111 @@
         "key": "alt+cmd+j",
         "command": "latex-workshop.refresh-viewer"
     },
+    {
+        "key": "ctrl+enter",
+        "command": "sqltools.executeCurrentQuery",
+        "when": "editorLangId == 'sql'"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "sqltools.executeQueryFromFile",
+        "when": "editorLangId == 'sql'"
+    },
+    // ref : https://qiita.com/m1ul24/items/c0a53885b893f121082f
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "terminalFocus"
+    },
+    // -----
+    // ref : https://qiita.com/wonder_meet/items/6df9170a22c62d89307c
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "explorer.newFolder"
+    },
+    // -----
+    {
+        "key": "ctrl+shift+b",
+        "command": "markdown.showPreviewToSide"
+    },
+    {
+        "key": "cmd+c",
+        "command": "-extension.vim_cmd+c",
+        "when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward"
+    },
+    {
+        "key": "alt+right",
+        "command": "-breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "alt+right",
+        "command": "-breadcrumbs.focusNextWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+    },
+    {
+        "key": "alt+right",
+        "command": "-cursorWordEndRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "-breadcrumbs.focusPrevious",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "alt+left",
+        "command": "-breadcrumbs.focusPreviousWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "-cursorWordLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack"
+    },
+
 ]

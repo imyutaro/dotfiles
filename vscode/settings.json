@@ -1,150 +1,31 @@
 {
-    "workbench.colorTheme": "Bear Theme",
+    "workbench.colorTheme": "crayon-vscode",
     "workbench.startupEditor": "newUntitledFile",
-    // activity barを非表示に　keyboard shortcut で　cmd+ctrl+b で表示するように．
-    "workbench.activityBar.visible": true,
     // Open file in new tab
     "workbench.editor.enablePreview": false,
-
     "files.trimTrailingWhitespace": true,
-
-    "window.zoomLevel": 1,
-
     "editor.renderControlCharacters": true,
-    "editor.wordWrap": "on",
-    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.wordWrap": "off",
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
     "editor.renderWhitespace": "all",
-    // tabのサイズ．
-    "editor.tabSize": 2,
     // indentに使う文字．
     "editor.insertSpaces": true,
+    // tabのサイズ．
+    "editor.tabSize": 2,
     // snippetをtabで展開できるようにする．
     "editor.tabCompletion": "on",
+    // editorのfont size
+    "editor.fontSize": 14,
     // editor.wordSeparators: 単語単位での移動を行う場合の区切り文字を指定
+    "editor.stickyScroll.maxLineCount": 10,
     // 日本語文書で単語移動を使うため、助詞や読点、括弧を区切り文字として指定する
-    "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
-
-    // 設定: LaTeX Workshop ------------------------
-    // LaTeX Workshop ではビルド設定を「Tool」と「Recipe」という2つで考える
-    //   Tool: 実行される1つのコマンド。コマンド (command) と引数 (args) で構成される
-    //   Recipe: Tool の組み合わわせを定義する。Tool の組み合わせ (tools) で構成される。
-    //           tools の中で利用される Tool は "latex-workshop.latex.tools" で定義されている必要がある。
-
-    // latex-workshop.latex.tools: Tool の定義
-    "latex-workshop.latex.tools": [
-        // latexmk を利用した uplatex によるビルドコマンド
-        {
-          "name": "Latexmk (upLaTeX)",
-          "command": "latexmk",
-          "args": [
-            "-f", "-gg", "-pv", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
-          ]
-        },
-        // latexmk を利用した xelatex によるビルドコマンド
-        {
-          "name": "Latexmk (XeLaTeX)",
-          "command": "latexmk",
-          "args": [
-            "-f", "-gg", "-pv", "-xelatex", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
-          ]
-        },
-        // latexmk を利用した platex によるビルドコマンド
-        // 古い LaTeX のテンプレートを使いまわしている (ドキュメントクラスが jreport や jsreport ) 場合のため
-        {
-          "name": "Latexmk (pLaTeX)",
-          "command": "latexmk",
-          "args": [
-            "-f", "-gg", "-pv", "-latex='platex'", "-latexoption='-kanji=utf8 -no-guess-input-env'", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
-          ]
-        },
-        // latexmk を利用した lualatex によるビルドコマンド
-        {
-          "name": "Latexmk (LuaLaTeX)",
-          "command": "latexmk",
-          "args": [
-            "-f", "-gg", "-pv", "-lualatex", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
-          ]
-        }
-    ],
-
-    // latex-workshop.latex.recipes: Recipe の定義
-    "latex-workshop.latex.recipes": [
-        // LaTeX(upLaTeX) で書かれた文書のビルドレシピ
-        {
-          "name": "upLaTeX",
-          "tools": [
-            "Latexmk (upLaTeX)"
-          ]
-        },
-        // XeLaTeX で書かれた文書のビルドレシピ
-        {
-          "name": "XeLaTeX",
-          "tools": [
-            "Latexmk (XeLaTeX)"
-          ]
-        },
-        // LaTeX(pLaTeX) で書かれた文書のビルドレシピ
-        {
-          "name": "pLaTeX",
-          "tools": [
-            "Latexmk (pLaTeX)"
-          ]
-        },
-        // LuaLaTeX で書かれた文書のビルドレシピ
-        {
-          "name": "LuaLaTeX",
-          "tools": [
-            "Latexmk (LuaLaTeX)"
-          ]
-        }
-    ],
-
-    // set default recipe
-    "latex-workshop.latex.recipe.default": "first",
-
-    // latex-workshop.latex.magic.args: マジックコメント付きの LaTeX ドキュメントをビルドする設定
-    // '%!TEX' で始まる行はマジックコメントと呼ばれ、LaTeX のビルド時にビルドプログラムに解釈され、
-    // プログラムの挙動を制御する事ができる。
-    // 参考リンク: https://blog.miz-ar.info/2016/11/magic-comments-in-tex/
-    "latex-workshop.latex.magic.args": [
-      "-f", "-gg", "-pv", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
-    ],
-
-    // latex-workshop.latex.clean.fileTypes: クリーンアップ時に削除されるファイルの拡張子
-    // LaTeX 文書はビルド時に一時ファイルとしていくつかのファイルを生成するが、最終的に必要となるのは
-    // PDF ファイルのみである場合などが多い。また、LaTeX のビルド時に失敗した場合、失敗時に生成された
-    // 一時ファイルの影響で、修正後のビルドに失敗してしまう事がよくある。そのため、一時的なファイルを
-    // 削除する機能 (クリーンアップ) が LaTeX Workshop には備わっている。
-    "latex-workshop.latex.clean.fileTypes": [
-        "*.dvi", "*.aux", "*.bbl", "*.log", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.fdb_latexmk", // "*.synctex.gz",
-        // for Beamer files
-        "_minted*", "*.nav", "*.snm", "*.vrb",
-    ],
-
-    // latex-workshop.view.pdf.viewer: PDF ビューアの開き方
-    // VSCode 自体には PDF ファイルを閲覧する機能が備わっていないが、
-    // LaTeX Workshop にはその機能が備わっている。
-    // "tab" オプションを指定すると、今開いているエディタを左右に分割し、右側に生成されたPDFを表示するようにしてくれる
-    // この PDF ビュアーは LaTeX のビルドによって更新されると同期して内容を更新してくれる。
-    "latex-workshop.view.pdf.viewer": "tab",
-
-    // latex-workshop.latex.clean.onFailBuild.enabled: ビルド失敗時に一時ファイルのクリーンアップを行うかどうか
-    // 上記説明にもあったように、ビルド失敗時に生成された一時ファイルが悪影響を及ぼす事があるため、自動で
-    // クリーンアップがかかるようにしておく。
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-
-    // latex-workshop.latex.autoBuild.onSave.enabled: .tex ファイルの保存時に自動的にビルドを行うかどうか
-    // LaTeX ファイルは .tex ファイルを変更後にビルドしないと、PDF ファイル上に変更結果が反映されないため、
-    // .tex ファイルの保存と同時に自動的にビルドを実行する設定があるが、文書が大きくなるに連れてビルドにも
-    // 時間がかかってしまい、ビルドプログラムの負荷がエディタに影響するため、無効化しておく。
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
-
-    // synctexの設定．
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    "latex-workshop.synctex.path": "/Library/TeX/texbin/synctex",
-
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "editor.copyWithSyntaxHighlighting": false,
+    "extensions.ignoreRecommendations": false,
+    "extensions.autoUpdate": false,
     // 時計のフォーマット．clock extension. ----------------------
     "clock.active": true,
     "clock.format": "mmmm dS, dddd, h:MM tt",
@@ -152,12 +33,55 @@
     "clock.alignment": "Right",
     // "clock.priority": 10, // i dont know what is for...
     "clock.iconName": "clock",
-
+    // Python設定
+    // "python.languageServer":. "Pylance",
+    "python.analysis.typeCheckingMode":"basic",
+    // "python.formatting.blackPath": "black",
+    // "python.linting.flake8Path": "flake8",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    // "python.linting.flake8Enabled": true,
+    "python.linting.flake8Enabled": false,
+    // "python.linting.lintOnSave": true,
+    "python.linting.lintOnSave": false,
+    // "python.defaultInterpreterPath": "/Users/yutaro.ueno/.pyenv/versions/3.9.1/envs/glo",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.linting.flake8Args": [
+        "--max-line-length=120"
+    ],
+    "isort.args": [
+        "--profile=black"
+    ],
+    "[python]": {
+        // pyhtonの時はインデントを4
+        "editor.tabSize": 4,
+        // "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+            "source.fixAll.ruff": true
+        },
+        "editor.formatOnType": true
+    },
+    "python.formatting.provider": "black",
+    "ruff.organizeImports": false,
+    "ruff.args": ["--line-length=120"],
+    // sqlの時はインデントを4
+    "[sql]": {
+        "editor.tabSize": 4
+    },
     // [markdown] 言語に対して上書きされるエディター設定を構成します。
-    "[markdown]":  {
-      "editor.wordWrap": "on",
-      "editor.quickSuggestions": true,
-      "editor.snippetSuggestions": "top"
+    "[markdown]": {
+        "editor.tabSize": 2,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.snippetSuggestions": "top"
     },
     // markdownの数式レンダリングをmathjaxで行う．
     "markdown-preview-enhanced.mathRenderingOption": "MathJax",
@@ -167,18 +91,30 @@
     "markdown-preview-enhanced.enableExtendedTableSyntax": true,
     "markdown-preview-enhanced.codeBlockTheme": "github.css",
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
-
+    "markdown-preview-enhanced.scrollSync": false,
+    // "markdown.preview.scrollEditorWithPreview": false,
+    // "markdown.preview.scrollPreviewWithEditor": false,
     // Vim
     // Vimの検索コマンド時のハイライト表示
     "vim.hlsearch": true,
     // Vimの無名レジスタとクリップボードを同期
-    "vim.useSystemClipboard": true,
-
+    // "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.vimrc",
+    // undoが効かなくなっているissue. VSCodeのupgradeで起きているらしい、治るまで↓で対応.
+    // https://github.com/VSCodeVim/Vim/issues/8157#issuecomment-1400217493
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Undo & Redo
+        { "before": ["u"], "commands": ["undo"] },
+        { "before": ["c-r"], "commands": ["redo"] }
+      ],
+    // https://stackoverflow.com/questions/50888475/code-folds-are-automatically-opened-when-cursor-moves-over-them-in-vs-code-vim
+    "vim.foldfix": true,
     // TODO high light
     "todohighlight.isEnable": true,
     "todohighlight.keywords": [
         {
-            "text": "MEMO:",
+            "text": "NOTE:",
             "backgroundColor": "#3cb371",
             "overviewRulerColor": "#3cb371",
             "color": "#ffffff",
@@ -192,4 +128,73 @@
             "isWholeLine": false,
         },
     ],
+    // SQLTools
+    "sqltools.connections": [
+        {
+            "askForPassword": true,
+            "database": "pj020270",
+            "driver": "AWS Redshift",
+            "name": "MiniPro",
+            "port": 5439,
+            "previewLimit": 30,
+            "server": "52.196.229.100",
+            "username": "yutaro_ueno",
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": false
+                }
+            }
+        },
+        {
+            "askForPassword": true,
+            "database": "freespace",
+            "driver": "AWS Redshift",
+            "name": "freespace",
+            "port": 5439,
+            "previewLimit": 30,
+            "server": "52.196.229.100",
+            "username": "yutaro_ueno",
+            "pgOptions": {
+                "ssl": {
+                    // "rejectUnauthorized": true,
+                    "requestCert": true,
+                    "ca": "/Users/yutaro.ueno/aws_ssl/rds-combined-ca-bundle.pem",
+                    "key": "/Users/yutaro.ueno/aws_ssl/rds-combined-ca-bundle.pem",
+                    "cert": "/Users/yutaro.ueno/aws_ssl/rds-combined-ca-bundle.pem",
+                }
+            }
+        }
+    ],
+    "sqltools.results": {
+        "limit": 50
+    },
+    "sqltools.autoOpenSessionFiles": false,
+    "sqltools.highlightQuery": false,
+    "yaml.schemas": {
+        "file:///Users/yutaro.ueno/.vscode/extensions/atlassian.atlascode-2.8.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.jqlList": [
+        {
+            "id": "81e0d98f-faba-49a5-9a07-0688b51b58f9",
+            "enabled": true,
+            "name": "My brainpad Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "d65c220b-6afd-48d1-b8a3-9f21b70c7788",
+            "monitor": true
+        }
+    ],
+    "editor.accessibilitySupport": "off",
+    "markdown-pdf.executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "redhat.telemetry.enabled": false,
+    "svelte.enable-ts-plugin": true,
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode",
+        "editor.formatOnSave": true,
+    },
+    "livePreview.portNumber": 8000,
+    "workbench.activityBar.visible": false,
 }
